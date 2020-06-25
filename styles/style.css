@@ -2,6 +2,10 @@ body{
     margin: 0px;
     font-family: "consolas";
 }
+footer{
+    background: linear-gradient(50deg,blue,pink);
+    height: 100px;
+}
 
 .img-logo{
     width: 50px;
@@ -13,12 +17,13 @@ body{
 .conexiones{
     background: linear-gradient(50deg,blue,pink);
     color: white;
+    font-size: 12px;
 }
 .conexiones p{
     margin: 0px;
 }
 header{
-    height: 250px;
+    height: 200px;
 }
 .navegacion{
     position: relative;
@@ -39,11 +44,61 @@ nav ul li{
     border: 2px solid;
     margin: 10px 20px;
     padding: 10px 10px;
+    user-select: none;
 }
 
+.form-busqueda{
+    position: relative;
+    background-color: rgb(240, 229, 229);
+    /* height: 150px; */
+    margin: 0px 30px;
+    border: 2px ridge gray;
+    
+}
+
+.cuadro-busqueda-titulo{
+    background: linear-gradient(50deg,blue,pink);
+    height: 20px;
+}
+
+.form-busqueda input[type="text"]{
+    width: 83%;
+    height: 35px;
+    border: 2px inset grey;
+    margin: 10px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.form-busqueda input[type="button"]{
+    width: 100px;
+    border: 1px solid grey;
+    height: 35px;
+    margin-right: 5px;
+}
+.cuadro-busqueda-resultados{
+    position: relative;
+    border-top: 2px ridge grey;
+    background-color: rgb(240, 229, 229);
+    
+}
+ul{
+    padding: 0px;
+}
+.cuadro-busqueda-resultados ul li {
+    background-color: rgb(240, 229, 229);
+    text-decoration: none;
+    border: 2px inset gray;
+    list-style: none;
+    width: 83%;
+    height: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 2px;
+}
+/************contenedores gif*******************/
 .contenedor-gif{
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 300px;
+    background-color: rgb(240, 229, 229);
+    height: 200px;
     margin: 30px;
     
 }
@@ -55,7 +110,7 @@ nav ul li{
     height: 25px;
     padding: 5px 20px;
     font-size: 20px;
-    background-color: seashell;
+    background-color: white;
 }
 .encabezado-contenedor-gif h6{
     margin: 0px;
