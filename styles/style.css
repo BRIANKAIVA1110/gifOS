@@ -98,7 +98,6 @@ ul{
 /************contenedores gif*******************/
 .contenedor-gif{
     background-color: rgb(240, 229, 229);
-    height: 200px;
     margin: 30px;
     
 }
@@ -118,13 +117,37 @@ ul{
 
 /*cuadro-fig*/
 .resultado-busqueda{
-    display: flex;
+    display: none;
 }
+.contendor-resultado-busqueda-gif{
+    position: relative;
+    top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .cuadro-fig{
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
+    /* display: inline-block; */
+    margin: 20px;
 }
 .cuadro-fig img{
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
+}
+.cuadro-fig-titulo{
+    background: linear-gradient(90deg,blue,pink);
+    position: relative;
+    height: 40px;
+    width: 100%;
+    top:-40px;
+    display: none;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+.cuadro-fig:hover > .cuadro-fig-titulo{
+    display: inline-block;
 }
