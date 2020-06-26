@@ -1,9 +1,10 @@
 body{
     margin: 0px;
     font-family: "consolas";
+    background-color: rgb(51, 14, 68);
 }
 footer{
-    background: linear-gradient(50deg,blue,pink);
+    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
     height: 100px;
 }
 
@@ -15,7 +16,7 @@ footer{
 }
 
 .conexiones{
-    background: linear-gradient(50deg,blue,pink);
+    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
     color: white;
     font-size: 12px;
 }
@@ -27,37 +28,54 @@ header{
 }
 .navegacion{
     position: relative;
-    background-color: rgba(60, 30, 20, 0.2);
-    display: flex;
-    height: 70px;
-    align-items: center;
-    justify-content: space-between;
+    background-color: rgba(60, 30, 20, 0);
+    height: 50px;
     margin: 0px 30px;
     padding: 10px 30px;
-    top: 50px;
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
+
 ul{
     margin: 0px;
+    padding: 0px;
 }
 nav ul li{
     display: inline-block;
+    width: 110px;
+    height: 50px;
+    padding: 5px 20px;
+    text-align: center;
     border: 2px solid;
-    margin: 10px 20px;
-    padding: 10px 10px;
     user-select: none;
+    background-color: rgb(236, 138, 220);
 }
-
+.subMenu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    top: 60px;
+    
+}
+.subMenu li{
+    top: 10px;
+}
+li:hover{
+    background-color: rgb(221, 64, 195);
+}
 .form-busqueda{
     position: relative;
     background-color: rgb(240, 229, 229);
     /* height: 150px; */
     margin: 0px 30px;
-    border: 2px ridge gray;
-    
+    border: 2px solid gray;
 }
 
 .cuadro-busqueda-titulo{
-    background: linear-gradient(50deg,blue,pink);
+    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
     height: 20px;
 }
 
@@ -69,11 +87,17 @@ nav ul li{
     font-size: 14px;
     padding-left: 10px;
 }
-.form-busqueda input[type="button"]{
+.form-busqueda button{
     width: 100px;
     border: 1px solid grey;
     height: 35px;
     margin-right: 5px;
+    cursor: pointer;
+}
+.form-busqueda button:disabled{
+    background-color: rgb(236, 138, 220);
+    color: black;
+    cursor: initial;
 }
 .cuadro-busqueda-resultados{
     position: relative;
@@ -81,9 +105,8 @@ nav ul li{
     background-color: rgb(240, 229, 229);
     display: none;
 }
-ul{
-    padding: 0px;
-}
+
+
 .cuadro-busqueda-resultados ul li {
     background-color: rgb(240, 229, 229);
     text-decoration: none;
@@ -94,10 +117,11 @@ ul{
     margin: 10px;
     padding-left: 10px;
     border-radius: 2px;
+    cursor: pointer;
 }
 /************contenedores gif*******************/
 .contenedor-gif{
-    background-color: rgb(240, 229, 229);
+    /* background-color: rgb(240, 229, 229); */
     margin: 30px;
     
 }
@@ -114,8 +138,6 @@ ul{
 .encabezado-contenedor-gif h6{
     margin: 0px;
 }
-
-
 /*busqueda cuadro-fig*/
 .resultado-busqueda{
     display: none;
@@ -157,5 +179,12 @@ ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+}
+
+/*temas*/
+#opcionCambiarTema a{
+    position: relative;
+    display: none;
 
 }

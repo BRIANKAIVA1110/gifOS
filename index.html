@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link id="estilo" rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +17,12 @@
             <nav>
                 <ul>
                     <li>Crear Guifos</li>
-                    <li>Elegir Tema</li>
+                    <li id="opcionCambiarTema">temas
+                        <ul class="subMenu">
+                            <li>Claro</li>
+                            <li>Oscuro</li>
+                        </ul>
+                    </li>
                     <li>Mis Guifos</li>
                 </ul>
             </nav>
@@ -26,13 +32,13 @@
     <section>
         <div class="form-busqueda">
             <div class="cuadro-busqueda-titulo"></div>
-            <input type="text" name="txtBusqueda" id="txtBusqueda">
-            <input type="button" value="Buscar" name="btnBuscar"  id="btnBuscar">
+            <input type="text" name="txtBusqueda" id="txtBusqueda" placeholder="Buscar.....">
+            <button id="btnBuscar">
+                <i class="fas fa-search"></i> 
+                Buscar
+            </button>
             <div class="cuadro-busqueda-resultados">
-                <ul>
-                    <li>resultado1</li>
-                    <li>resultado1</li>
-                    <li>resultado1</li>
+                <ul id="resultadoAutocompletado">
                 </ul>
             </div>
         </div>
@@ -41,7 +47,7 @@
                 <div class="encabezado-contenedor-gif">
                     <h6>Hoy te sugerimos</h6>
                 </div>
-                <div class="contendor-sugerencias-gif">
+                <div id="resultadoSugerencia" class="contendor-sugerencias-gif">
 
                 </div>
             </div>
@@ -49,9 +55,9 @@
         <aside id="tendencia" class="tendencias">
             <div class="contenedor-gif">
                 <div class="encabezado-contenedor-gif">
-                    <h6>Hoy te sugerimos</h6>
+                    <h6>Tendencias</h6>
                 </div>
-                <div class="contendor-tendencias-gif">
+                <div id="resultadoTendencia" class="contendor-tendencias-gif">
 
                 </div>
             </div>
