@@ -115,3 +115,16 @@ ul{
 .encabezado-contenedor-gif h6{
     margin: 0px;
 }
+
+/*cuadro-fig*/
+.resultado-busqueda{
+    display: flex;
+}
+.cuadro-fig{
+    width: 200px;
+    height: 200px;
+}
+.cuadro-fig img{
+    width: 200px;
+    height: 200px;
+}
