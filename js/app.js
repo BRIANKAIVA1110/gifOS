@@ -1,4 +1,3 @@
-console.log("hola");
 
 const apiKey = "TMGSxnWlK9PpInWuG6JMNRCvys8lrEbb";
 
@@ -8,9 +7,11 @@ const apiKey = "TMGSxnWlK9PpInWuG6JMNRCvys8lrEbb";
  */
 (()=>{
     console.log("inicio")
-    document.getElementById("btnBuscar").disabled =true;
-    obtenerResultadoSugenrencias("post malone");
-    obtenerResultadoTendencias("tendencias");
+    // document.getElementById("btnBuscar").disabled =true;
+    obtenerResultadoSugenrencias("javascript");
+    obtenerResultadoTendencias("coronavirus");
+    if(localStorage.getItem("temaKey")!=null)
+        document.getElementById("estilo").href=`./styles/${localStorage.getItem("temaKey")}`;
 })();
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
@@ -168,12 +169,14 @@ function prepararMuestraDeResultados(titulo){
  */
 document.getElementById("itemTemaOscuro").addEventListener("click",(event)=>{
     document.getElementById("estilo").href=`./styles/oscuro.css`;
+    localStorage.setItem("temaKey","oscuro.css");
 });
 /**
  * cambio tema color claro
  */
 document.getElementById("itemTemaClaro").addEventListener("click",(event)=>{
     document.getElementById("estilo").href=`./styles/claro.css`;
+    localStorage.setItem("temaKey","claro.css");
 });
 
 
