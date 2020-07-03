@@ -213,6 +213,93 @@ li:hover{
 
 /*############################################*/
 
-video{
+:root{
+    --panelVentanaGrabacionHeigth: 500px;
+    --panelVentanaGrabacionWidth: 700px;
+}
+
+
+.form-video{
+    position: relative;
+    height: var(--panelVentanaGrabacionHeigth);
+    width: var(--panelVentanaGrabacionWidth);
     border: solid;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1px;
+    background-color: rgb(202, 193, 191);
+}
+.form-video-titulo{
+    display: flex;
+    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
+    height: 25px;
+    justify-content: space-between;
+    padding: 5px;
+    color: white;
+}
+
+.form-video-contenedor{
+    border: solid;
+    height: calc(var(--panelVentanaGrabacionHeigth) - 30% );
+    width: 95%;
+    position: relative;
+    left: 50%;
+    margin-top: 20px;
+    transform: translate(-50%);
+}
+
+.contendor-video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.contenedor-gif-grabacion{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+.contenedor-gif-grabacion > img{
+    width: 100%;
+    height: 100%;
+}
+.contenedor-acciones{
+    display: flex;
+    height: 60px;
+    padding: 10px;
+    justify-content: flex-end;
+
+}
+
+.contenedor-acciones > button{
+    width: 120px;
+    margin-left: 5px;
+    height: 50px;
+}
+
+
+.form-terminos-contenedor{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.form-terminos-contenedor img{
+    width: 30px;
+    height: 30px;
+}
+
+.form-terminos-contenedor div{
+    width: 90%;
+    height: 300px;
+}
+
+.form-terminos-contenedor div ol li:hover{
+    background-color: initial;/*se esta heredando caracteristicas del menu.. se "quitan"*/
+}
+
+#panelVentanaGrabacion{
+    display: none;
 }
