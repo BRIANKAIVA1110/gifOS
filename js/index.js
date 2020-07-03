@@ -11,7 +11,7 @@ const apiKey = "TMGSxnWlK9PpInWuG6JMNRCvys8lrEbb";
     obtenerResultadoSugenrencias("javascript");
     obtenerResultadoTendencias("coronavirus");
     if(localStorage.getItem("temaKey")!=null)
-        document.getElementById("estilo").href=`./styles/${localStorage.getItem("temaKey")}`;
+        document.getElementById("estilo").href=`../styles/${localStorage.getItem("temaKey")}`;
 })();
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**

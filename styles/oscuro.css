@@ -42,9 +42,7 @@ ul{
     margin: 0px;
     padding: 0px;
 }
-li{
-    padding-top: 20px;
-}
+
 nav > ul > li{
     display: inline-block;
     width: 110px;
@@ -53,6 +51,7 @@ nav > ul > li{
     border: 2px solid;
     user-select: none;
     background-color: rgb(236, 138, 220);
+    cursor: pointer;
 }
 nav > ul > li:hover > .subMenu{
     display: block;
@@ -74,6 +73,15 @@ nav > ul > li:hover > .subMenu{
     text-align: center;
     top: 20px;
     border-top: solid;
+    cursor: pointer;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 100%;
 }
 
 li:hover{
@@ -201,3 +209,6 @@ li:hover{
     display: none;
 
 }
+
+
+/*############################################*/
