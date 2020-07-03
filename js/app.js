@@ -11,8 +11,6 @@ const apiKey = "TMGSxnWlK9PpInWuG6JMNRCvys8lrEbb";
     document.getElementById("btnBuscar").disabled =true;
     obtenerResultadoSugenrencias("post malone");
     obtenerResultadoTendencias("tendencias");
-    
-    console.log(document.getElementById("estilo").href="./styles/oscuro.css");
 })();
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
@@ -164,6 +162,19 @@ function prepararMuestraDeResultados(titulo){
     document.getElementById("resultadoBusqueda").style.display="block";
     document.getElementById("tituloBusqueda").innerText= titulo;
 }
+
+/**
+ * cambio tema color oscuro
+ */
+document.getElementById("itemTemaOscuro").addEventListener("click",(event)=>{
+    document.getElementById("estilo").href=`./styles/oscuro.css`;
+});
+/**
+ * cambio tema color claro
+ */
+document.getElementById("itemTemaClaro").addEventListener("click",(event)=>{
+    document.getElementById("estilo").href=`./styles/claro.css`;
+});
 
 
 
