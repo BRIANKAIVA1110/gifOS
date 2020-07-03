@@ -279,7 +279,6 @@ li:hover{
     height: 50px;
 }
 
-
 .form-terminos-contenedor{
     display: flex;
     padding: 20px;
@@ -303,3 +302,4 @@ li:hover{
 #panelVentanaGrabacion{
     display: none;
 }
+
