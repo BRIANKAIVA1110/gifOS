@@ -4,7 +4,7 @@ body{
     background-color: rgb(194, 202, 179);
 }
 footer{
-    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
+    background: linear-gradient(50deg,rgb(97, 146, 202),rgb(236, 138, 220));
     height: 100px;
 }
 
@@ -16,7 +16,7 @@ footer{
 }
 
 .conexiones{
-    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
+    background: linear-gradient(50deg,rgb(97, 146, 202),rgb(236, 138, 220));
     color: white;
     font-size: 12px;
 }
@@ -97,7 +97,7 @@ li:hover{
 }
 
 .cuadro-busqueda-titulo{
-    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
+    background: linear-gradient(50deg,rgb(97, 146, 202),rgb(236, 138, 220));
     height: 20px;
 }
 
@@ -183,7 +183,7 @@ li:hover{
     height: 230px;
 }
 .cuadro-fig-titulo{
-    background: linear-gradient(90deg,blue,pink);
+    background: linear-gradient(50deg,rgb(97, 146, 202),rgb(236, 138, 220));
     position: relative;
     height: 40px;
     width: 100%;
@@ -231,7 +231,7 @@ li:hover{
 }
 .form-video-titulo{
     display: flex;
-    background: linear-gradient(50deg,blue,rgb(236, 138, 220));
+    background: linear-gradient(50deg,rgb(97, 146, 202),rgb(236, 138, 220));
     height: 25px;
     justify-content: space-between;
     padding: 5px;

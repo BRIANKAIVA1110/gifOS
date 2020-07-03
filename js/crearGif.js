@@ -2,6 +2,13 @@
 let recorder = null;
 let blob = null;
 //#####################################################
+(()=>{
+    console.log();
+    if(localStorage.getItem("temaKey")!=null)
+        document.getElementById("estilo").href="../styles/"+localStorage.getItem("temaKey");
+
+    
+})()
 
 
 function getStreamAndRecord () {
@@ -62,4 +69,21 @@ document.getElementById("btnComenzar").addEventListener("click",()=>{
 
 document.getElementById("btnCancelar").addEventListener("click",()=>{
     location.href="../index.html";
+});
+
+
+//cambio tema-> se puede usar "modules" para no replicar codigo... etc
+/**
+ * cambio tema color oscuro
+ */
+document.getElementById("itemTemaOscuro").addEventListener("click",(event)=>{
+    document.getElementById("estilo").href=`../styles/oscuro.css`;
+    localStorage.setItem("temaKey","oscuro.css");
+});
+/**
+ * cambio tema color claro
+ */
+document.getElementById("itemTemaClaro").addEventListener("click",(event)=>{
+    document.getElementById("estilo").href=`../styles/claro.css`;
+    localStorage.setItem("temaKey","claro.css");
 });

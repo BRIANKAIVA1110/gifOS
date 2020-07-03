@@ -168,14 +168,14 @@ function prepararMuestraDeResultados(titulo){
  * cambio tema color oscuro
  */
 document.getElementById("itemTemaOscuro").addEventListener("click",(event)=>{
-    document.getElementById("estilo").href=`./styles/oscuro.css`;
+    document.getElementById("estilo").href=`../styles/oscuro.css`;
     localStorage.setItem("temaKey","oscuro.css");
 });
 /**
  * cambio tema color claro
  */
 document.getElementById("itemTemaClaro").addEventListener("click",(event)=>{
-    document.getElementById("estilo").href=`./styles/claro.css`;
+    document.getElementById("estilo").href=`../styles/claro.css`;
     localStorage.setItem("temaKey","claro.css");
 });
 
