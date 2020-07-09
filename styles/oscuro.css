@@ -38,6 +38,17 @@ header{
     background-size: contain;
     background-repeat: no-repeat;
 }
+.navegacion > div{
+    width: 150px;
+}
+.navegacion > div > a{
+    display: inline-block;
+    height: 50px;
+    width: 120px;
+    background: url("../images/arrow.svg"), url("../images/logo.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+}
 .navegacion{
     position: relative;
     background-color: rgba(60, 30, 20, 0);
@@ -324,7 +335,20 @@ header{
     justify-content: flex-end;
 
 }
-
+#btnGrabar{
+    background-image: url(../images/camera.svg);
+    background-repeat: no-repeat;
+    background-position: end;
+    background-position-y: 10px;
+    background-position-x: 10px;
+}
+#btnStop{
+    background-repeat: no-repeat;
+    background-position: end;
+    background-position-y: 10px;
+    background-position-x: 10px;
+    background-color: rgb(231, 49, 49);
+}
 .contenedor-acciones > button{
     width: 120px;
     margin-left: 5px;
