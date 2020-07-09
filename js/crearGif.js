@@ -122,9 +122,8 @@ document.getElementById("btnGuardar").addEventListener("click", ()=>{
 });
 
 /**
- * 
+ * cuando se hace click en btnVolverIntentar en panelVentanaGrabacion
  */
-
 document.getElementById("btnVolverIntentar").addEventListener("click", ()=>{
     document.getElementById("btnVolverIntentar").style.display="none";
     document.getElementById("btnGuardar").style.display="none";
@@ -132,4 +131,39 @@ document.getElementById("btnVolverIntentar").addEventListener("click", ()=>{
     document.getElementById("btnGrabar").style.display="block";
     document.getElementById("video").style.display="block";
     document.getElementById("contenedorGif").style.display="none";
+});
+
+/**
+ * cuando se hace click en cancelar en panelVentanaUpLoad
+ */
+document.getElementById("btnCancelarUpload").addEventListener("click",()=>{
+    document.getElementById("panelVentanaUpLoad").style.display="none";
+    document.getElementById("panelVentanaGrabacion").style.display="block";
+});
+/**
+ * cuando se hace click en listo en panelVentanaUpLoadOKK
+ */
+document.getElementById("btnlisto").addEventListener("click",()=>{
+    document.getElementById("panelVentanaUpLoadOKK").style.display="none";
+    document.getElementById("panelVentanaGrabacion").style.display="block";
+    document.getElementById("btnVolverIntentar").style.display="none";
+    document.getElementById("btnGuardar").style.display="none";
+    document.getElementById("btnStop").style.display="none";
+    document.getElementById("btnGrabar").style.display="block";
+    document.getElementById("video").style.display="block";
+    document.getElementById("contenedorGif").style.display="none";
+});
+
+/**
+ * cuando se hace click en btnGuardar en panelVentanaGrabacion
+ */
+document.getElementById("btnGuardar").addEventListener("click",()=>{
+    document.getElementById("panelVentanaUpLoad").style.display="block";
+    document.getElementById("panelVentanaGrabacion").style.display="none";
+    setTimeout(()=>{
+        document.getElementById("panelVentanaUpLoad").style.display="none";
+        document.getElementById("panelVentanaUpLoadOKK").style.display="block";
+        console.log("pepepepepepepepe")
+
+    },4000)
 });
