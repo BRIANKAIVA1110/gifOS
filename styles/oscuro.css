@@ -369,3 +369,67 @@ header{
 #panelVentanaGrabacion{
     display: none;
 }
+/************panel upload*************************/
+#panelVentanaUpLoad{
+    display: none;
+}
+.form-contenido{
+    border: 2px solid black;
+    height: 70%;
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-contenido img{
+    height: 40px;
+    width: 40px;
+}
+.form-contenido > progress{
+    display: block;
+    height: 20px;
+    width: 300px;
+}
+
+/************panel exito******************/
+#panelVentanaUpLoadOKK{
+    display: none;
+}
+#panelVentanaUpLoadOKK .form-contenido{
+    border: none;
+    height: 70%;
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.contenedor-gif-creado{
+    border: 1px solid black;
+    width: 50%;
+    height: 250px;
+    background-color: white;
+}
+.contenedor-acciones-gif-creado{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 250px;
+    /* background-color: white; */
+    padding: 30px 20px;
+}
+.contenedor-acciones-gif-creado > div{
+    
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor-acciones-gif-creado > div > button{
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+}
+.contenedor-acciones-gif-creado > div > button:hover{
+    background-color: rgb(201, 197, 197);
+}
