@@ -11,7 +11,7 @@
 
 body{
     margin: 0px;
-    font-family: "consolas";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--backgroud-body);
 }
 footer{
@@ -67,9 +67,9 @@ header{
 .navegacion > nav > ul > li{
     display: inline-block;
     background-color: var(--rosa-general);
-    height: 60px;
-    width: 110px;
-    box-shadow: 1px 1px 1px white inset, -2px -2px 1px black inset;
+    height: 40px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px white inset, -1px -1px 1px black inset;
     border-radius: 1px;
 }
 
@@ -80,7 +80,7 @@ header{
     display: block;
     height: 100%;
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 10px 20px 10px 20px;
     box-sizing: border-box;
 }
@@ -89,7 +89,7 @@ header{
     background-color: var(--rosa-sub-menu);
     padding: 0px;
     list-style: none;
-    top:85px;
+    top:65px;
     z-index: 1000;
     box-shadow: 1px 1px 1px white inset,1px 1px 1px black inset;
     display: none;
@@ -104,7 +104,7 @@ header{
 }
 .subMenu > li:hover{
     cursor: pointer;
-    background-color: rgb(237, 237, 241);
+    background-color: rgb(227, 227, 233);
 }
 .navegacion > nav > ul > li:hover > .subMenu{
     display: block;
@@ -113,7 +113,7 @@ header{
 .form-busqueda{
     padding: 2px;
     position: relative;
-    background-color: rgb(199, 193, 193);
+    background-color: rgb(219, 219, 219);
     margin: 0px 30px;    
     box-shadow: -2px -2px 2px rgb(94, 94, 94) inset, 2px 2px 2px white inset;
 }
@@ -138,18 +138,17 @@ header{
     margin-right: 5px;
     cursor: pointer;
     background-color: rgb(233, 229, 229);
-    box-shadow: -1px -1px 2px rgb(20, 20, 20) inset, 2px 2px 1px white inset;
+    box-shadow: -1px -1px 2px rgb(20, 20, 20) inset, 1px 1px 1px white inset;
 }
 .form-busqueda button:disabled{
     background-color: var(--rosa-hover);
     color: black;
-    color: white;
     cursor: initial;
 }
 .cuadro-busqueda-resultados{
     position: relative;
     border-top: 2px ridge grey;
-    background-color: rgb(199, 193, 193);
+    background-color: rgb(219, 219, 219);
     display: none;
 }
 .cuadro-busqueda-resultados ul{
@@ -167,6 +166,7 @@ header{
     padding-left: 10px;
     border-radius: 2px;
     cursor: pointer;
+    box-shadow: -1px -1px 1px rgb(20, 20, 20) inset, 1px 1px 1px white inset;
 }
 
 /************contenedores gif general*******************/
@@ -181,8 +181,8 @@ header{
     padding: 5px 20px;
     font-size: 20px;
     background-color: white;
-    border: 1px solid blue;
-    box-shadow: 2px 2px inset black;
+    border: 1px solid rgb(214, 190, 190);
+    box-shadow: 1px 1px 2px inset black, -1px -1px 2px inset grey;
     padding: 10px 0px 5px 20px;
 }
 .encabezado-contenedor-gif h6{
