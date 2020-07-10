@@ -1,4 +1,5 @@
 //variables globales para poder mantener el ciclo de vida de los datos
+const apiKey = "TMGSxnWlK9PpInWuG6JMNRCvys8lrEbb";
 let recorder = null;
 let blob = null;
 let form = new FormData();
@@ -111,17 +112,6 @@ document.getElementById("itemTemaClaro").addEventListener("click",(event)=>{
 
 
 /**
- * 
- */
-
-document.getElementById("btnGuardar").addEventListener("click", ()=>{
-    
-    form.append('file3', recorder.getBlob(), 'myGif.gif'); 
-    form.pos
-
-});
-
-/**
  * cuando se hace click en btnVolverIntentar en panelVentanaGrabacion
  */
 document.getElementById("btnVolverIntentar").addEventListener("click", ()=>{
@@ -154,16 +144,55 @@ document.getElementById("btnlisto").addEventListener("click",()=>{
     document.getElementById("contenedorGif").style.display="none";
 });
 
+
+
 /**
  * cuando se hace click en btnGuardar en panelVentanaGrabacion
  */
-document.getElementById("btnGuardar").addEventListener("click",()=>{
+document.getElementById("btnGuardar").addEventListener("click", ()=>{
+    
     document.getElementById("panelVentanaUpLoad").style.display="block";
     document.getElementById("panelVentanaGrabacion").style.display="none";
-    setTimeout(()=>{
+
+    let form = new FormData();
+    form.append('file',blob,"pepe.gif");
+
+    let result = fetch(`https://upload.giphy.com/v1/gifs?api_key=${apiKey}`, 
+    {
+        method: 'post',
+        body: form
+    }).then((data)=>{
+        
+        if(data.status==200){
+            console.log(`status 200`);
+            console.log(data);
+            showPanelOk();
+        }else
+        {
+            console.log(`status !=200`);
+            console.log(data);
+            document.getElementById("panelVentanaUpLoad").style.display="none";
+            document.getElementById("panelVentanaGrabacion").style.display="block";
+            alert("algo ocurrio mal???")
+        }
+        return data.json();
+    }).then((data)=>{
+        console.log("body");
+        console.log(data.data.id);//este id se debe guardar para luego consultar a la api, ademas guardarlo en el app storage
+        localStorage.setItem(`gifpepe${parseInt(Math.random()*1000000)}`,data.data.id);
+
+    }).catch(error => {
+        console.log(error);
+        alert("Hubo en problema al grabar el gif, vuelva a intentarlo.");
         document.getElementById("panelVentanaUpLoad").style.display="none";
         document.getElementById("panelVentanaUpLoadOKK").style.display="block";
-        console.log("pepepepepepepepe")
+    });
 
-    },4000)
 });
+
+function showPanelOk(){
+    let panelContenerGif = document.getElementById("contenedorgifcreado");
+    document.getElementById("panelVentanaUpLoad").style.display="none";
+    document.getElementById("panelVentanaUpLoadOKK").style.display="block";
+    panelContenerGif.innerHTML=`<img src=${URL.createObjectURL(recorder.getBlob())} style="width:100%; height:100%;" alt="gif creado"/>`
+}
