@@ -14,17 +14,24 @@
             <p>Bienvenidos a gifos.com -------------- Donde los gif estan ////// Numero de visitas 127.0.0.1.</p>
         </div>
         <div class="navegacion">
-            <a href="../index.html"><img class="img-logo" src="../images/logo.png" alt=""></a>
+            <div>
+                <a href="../index.html"></a>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="../Pages/crearGif.html">Crear Guifos</a></li>
-                    <li id="opcionCambiarTema">temas
+                    <li>
+                        <a href="../Pages/crearGif.html">Crear Guifos</a>
+                    </li>
+                    <li>
+                        <a href="#">Elegir Temas</a>
                         <ul class="subMenu">
-                            <li id="itemTemaClaro">Claro</li>
-                            <li id="itemTemaOscuro">Oscuro</li>
+                            <li id="itemTemaClaro">Sailor Day</li>
+                            <li id="itemTemaOscuro">Sailor Nigth</li>
                         </ul>
                     </li>
-                    <li><a href="../Pages/crearGif.html">Mis Guifos</a></li>
+                    <li>
+                        <a id="btnMiGuif" href="#">Mis Guifos</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -48,6 +55,7 @@
                                 <li>Revisar el momento</li>
                                 <li>Listo para subir y compartir!</li>
                             </ol>
+                            <p>¿Quieres comenzar a crear tu guifo ahora?</p>
                         </div>      
                 </div>
                 <div id="contenedorAcciones" class="contenedor-acciones">
@@ -68,11 +76,50 @@
                 </div>
                 <div id="contenedorAcciones" class="contenedor-acciones">
                     <button id="btnGrabar">Capturar</button>
-                    <button id="btnStop">Stop</button>
+                    <button id="btnStop">Listo</button>
                     <button id="btnVolverIntentar">Repetir Captura</button>
-                    <button id="btnGuardar">Guardar</button>
+                    <button id="btnGuardar">Subir GUifo</button>
                 </div>
-            
+            </div>
+        </aside>
+        <aside id="panelVentanaUpLoad" >
+            <div class="form-video">
+                <div class="form-video-titulo">
+                    Subiendo Guifo
+                    <button>x</button>
+                </div>
+                <div id="" class="form-contenido">        
+                    <img src="../images/globe_img.png" alt="img-upload">
+                    <p>Estamos subiendo tu Guifo...</p>
+                    <progress id="progresBar"></progress>
+                    <p>Tiempo medio 30 años, algunos minutos</p>
+
+                </div>
+                <div id="contenedorAcciones" class="contenedor-acciones">
+                    <button id="btnCancelarUpload">Cancelar</button>
+                </div>
+            </div>
+        </aside>
+        <aside id="panelVentanaUpLoadOKK" >
+            <div class="form-video">
+                <div class="form-video-titulo">
+                    Guifo subido con exíto
+                    <button>x</button>
+                </div>
+                <div id="" class="form-contenido">
+                    <div id="contenedorgifcreado" class="contenedor-gif-creado">
+                    </div>
+                    <div class="contenedor-acciones-gif-creado">
+                        <p>Gif creado con exito</p>
+                        <div>
+                            <button disabled="true">Copiar Enlace Guifo</button>
+                            <button disabled="true">Descargar Guifo</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="contenedorAcciones" class="contenedor-acciones">
+                    <button id="btnlisto">Listo</button>
+                </div>
             </div>
         </aside>
         <aside id="misGif" class="mis-gif">
