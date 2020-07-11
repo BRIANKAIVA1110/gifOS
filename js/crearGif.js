@@ -3,6 +3,8 @@ const apiKey = "TMGSxnWlK9PpInWuG6JMNRCvys8lrEbb";
 let recorder = null;
 let blob = null;
 let form = new FormData();
+var controller = new AbortController();
+var signal = controller.signal;
 //#####################################################
 /**
  * int--> main function 
@@ -91,6 +93,7 @@ document.getElementById("btnComenzar").addEventListener("click",()=>{
 
 document.getElementById("btnCancelar").addEventListener("click",()=>{
     location.href="../index.html";
+    
 });
 
 
@@ -122,7 +125,11 @@ document.getElementById("btnVolverIntentar").addEventListener("click", ()=>{
  * cuando se hace click en cancelar en panelVentanaUpLoad
  */
 document.getElementById("btnCancelarUpload").addEventListener("click",()=>{
+    controller.abort();
+    console.log("upload cancelado");
+    ocultarPaneles();
     mostrarPanelGrabacion();
+    
 });
 /**
  * cuando se hace click en listo en panelVentanaUpLoadOKK
@@ -179,8 +186,9 @@ document.getElementById("btnGuardar").addEventListener("click", ()=>{
 
     let result = fetch(`https://upload.giphy.com/v1/gifs?api_key=${apiKey}`, 
     {
+        signal: signal,
         method: 'post',
-        body: form
+        body: form,
     }).then((data)=>{
         
         if(data.status==200){
@@ -202,7 +210,7 @@ document.getElementById("btnGuardar").addEventListener("click", ()=>{
 
     }).catch(error => {
         console.log(error);
-        alert("Hubo en problema al grabar el gif, vuelva a intentarlo.");
+        alert("Se aborto la solicitud upload del gif.");
         mostrarPanelGrabacion();
     });
 
